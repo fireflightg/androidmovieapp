@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Moodvie Bar on top -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/textViewMoodvie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Moodvie_Logo"
+                android:textColor="@color/yellow"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <ImageView
+                android:id="@+id/happyface"
+                android:layout_width="39dp"
+                android:layout_height="49dp"
+                android:layout_marginTop="5dp"
+                app:srcCompat="@drawable/happy"
+                android:contentDescription="@string/happyface"
+                app:layout_constraintStart_toEndOf="@id/textViewMoodvie"
+                app:layout_constraintEnd_toStartOf="@id/textViewMood"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/textViewMoodvie"/>
+
+            <TextView
+                android:id="@+id/textViewMood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mood_happy_text"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Trailer that starts playing -->
+        <VideoView
+            android:id="@+id/videoViewTrailer"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Happy classics text -->
+        <TextView
+            android:id="@+id/textViewHappyClassics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/happy_classics_text"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:layout_gravity="start"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"/>
+
+        <!-- Movierow -->
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Movie 1 -->
+                <LinearLayout
+                    android:id="@+id/homealone_layout"
+                    android:layout_width="200dp"
+                    android:layout_height="100dp"
+                    android:layout_marginEnd="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="onHomeAloneClicked"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/homeAloneButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:contentDescription="@string/tr_description"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/homealone" />
+                </LinearLayout>
+
+                <!-- Movie 2 -->
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="200dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:contentDescription="@string/twd_description"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/norbit" />
+
+                <!-- Movie 3 -->
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="200dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="8dp"
+                    android:contentDescription="@string/tr_description"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/scarymovie" />
+
+                <!-- Movie 4 -->
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="200dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="8dp"
+                    android:contentDescription="@string/tr_description"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/whitechicks" />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <!-- Trending Happy Movies -->
+        <TextView
+            android:id="@+id/textViewTrendingHappyMovies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/trending_happy_mv"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"/>
+
+        <!-- Trending Movies Section -->
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollViewAds"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Trending Movie 1 -->
+                <ImageView
+                    android:id="@+id/up_ad"
+                    android:layout_width="200dp"
+                    android:layout_height="300dp"
+                    android:layout_marginEnd="8dp"
+                    android:contentDescription="@string/ad_up"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/up" />
+
+                <!-- Trending Movie 2 -->
+                <ImageView
+                    android:id="@+id/spiderman_ad"
+                    android:layout_width="200dp"
+                    android:layout_height="300dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:contentDescription="@string/ad_spiderman"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/spiderman" />
+
+                <!-- Trending Movie 3-->
+                <ImageView
+                    android:id="@+id/charlie_ad"
+                    android:layout_width="200dp"
+                    android:layout_height="300dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:contentDescription="@string/ad_spiderman"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/charlie" />
+
+                <!-- Add more Trending Movie ImageViews as needed -->
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <!-- Happy Genres section -->
+        <TextView
+            android:id="@+id/happyGenresLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/happy_genres"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewTrendingHappyMovies"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"/>
+
+        <!-- HorizontalScrollView for Happy Genres -->
+        <!-- Happy Genres section -->
+
+
+        <!-- HorizontalScrollView for Happy Genres -->
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollViewGenres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:scrollbars="none">
+
+            <!-- Content Happy Genres -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Placeholder for Genre 1 -->
+                <ImageView
+                    android:id="@+id/genreImage1"
+                    android:layout_width="200dp"
+                    android:layout_height="100dp"
+                    android:layout_marginEnd="8dp"
+                    android:contentDescription="@string/comedy_description"
+                    android:src="@drawable/comedy" />
+
+                <!-- Placeholder for Genre 2 -->
+                <ImageView
+                    android:id="@+id/genreImage2"
+                    android:layout_width="200dp"
+                    android:layout_height="100dp"
+                    android:layout_marginEnd="8dp"
+                    android:contentDescription="@string/animations_description"
+                    android:src="@drawable/animations" />
+
+                <!-- Placeholder for Genre 3 -->
+                <ImageView
+                    android:id="@+id/genreImage3"
+                    android:layout_width="200dp"
+                    android:layout_height="100dp"
+                    android:layout_marginEnd="8dp"
+                    android:contentDescription="@string/family_description"
+                    android:src="@drawable/family" />
+
+                <!-- Placeholder for Genre 4 -->
+                <ImageView
+                    android:id="@+id/genreImage4"
+                    android:layout_width="200dp"
+                    android:layout_height="100dp"
+                    android:contentDescription="@string/adventure_description"
+                    android:src="@drawable/adventure" />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+
+    </LinearLayout>
+
+</ScrollView>

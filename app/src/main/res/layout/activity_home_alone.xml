@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeAloneActivity"
+    android:background="@color/black">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- The Moodvie bar at the top -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/textViewMoodvie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Moodvie_Logo"
+                android:textColor="@color/yellow"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:clickable="true"
+                android:onClick="goBackToHappyMovies"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <ImageView
+                android:id="@+id/happyface"
+                android:layout_width="39dp"
+                android:layout_height="49dp"
+                android:layout_marginTop="5dp"
+                app:srcCompat="@drawable/happy"
+                android:contentDescription="@string/happyface"
+                app:layout_constraintStart_toEndOf="@id/textViewMoodvie"
+                app:layout_constraintEnd_toStartOf="@id/textViewMood"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/textViewMoodvie"/>
+
+            <TextView
+                android:id="@+id/textViewMood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mood_happy_text"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Image for the movie preview -->
+            <ImageView
+                android:id="@+id/previewImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/homealone"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/home_alone_preview" />
+
+            <!-- Play button image -->
+
+            <!-- Text view for the movie title -->
+            <ImageView
+                android:id="@+id/playButton"
+                android:layout_width="62dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="0dp"
+                android:contentDescription="@string/Playbtn"
+                android:src="@drawable/yllwplay" />
+
+            <TextView
+                android:id="@+id/titleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Home_alone_title"
+                android:textColor="@color/yellow"
+                android:textSize="24sp"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp" />
+
+            <!-- Description text view -->
+            <TextView
+                android:id="@+id/descriptionTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/home_alone_desc"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"
+                android:gravity="start" />
+
+            <!-- Actors section -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <!-- Actor 1 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal">
+
+                        <FrameLayout
+                            android:layout_width="100dp"
+                            android:layout_height="100dp">
+
+                            <ImageView
+                                android:id="@+id/actor1ImageView"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/happy_actor1"
+                                android:contentDescription="@string/Happyactor1"
+                                android:outlineProvider="background"
+                                android:clipToOutline="true"
+                                android:background="@drawable/circle_background"/>
+
+                        </FrameLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/Happyactor1"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+                    <!-- Actor 2 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal"
+                        android:layout_marginStart="16dp">
+
+                        <FrameLayout
+                            android:layout_width="100dp"
+                            android:layout_height="100dp">
+
+                            <ImageView
+                                android:id="@+id/actor2ImageView"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:contentDescription="@string/Happyactor2"
+                                android:src="@drawable/happy_actor2"
+                                android:clipToOutline="true"
+                                android:background="@drawable/circle_background"
+                                />
+
+                        </FrameLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/Happyactor2"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+                    <!-- Actor 3 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal"
+                        android:layout_marginStart="16dp">
+
+                        <FrameLayout
+                            android:layout_width="100dp"
+                            android:layout_height="100dp">
+
+                            <ImageView
+                                android:id="@+id/actor3ImageView"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:contentDescription="@string/Happyactor3"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/happy_actor3"
+                                android:clipToOutline="true"
+                                android:background="@drawable/circle_background"
+                                />
+
+                        </FrameLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/Happyactor3"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+                    <!-- Actor 4 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal"
+                        android:layout_marginStart="16dp">
+
+                        <FrameLayout
+                            android:layout_width="100dp"
+                            android:layout_height="100dp">
+
+                            <ImageView
+                                android:id="@+id/actor4ImageView"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:contentDescription="@string/Happyactor4"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/happy_actor4"
+                                android:clipToOutline="true"
+                                android:background="@drawable/circle_background"
+                                />
+
+                        </FrameLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/Happyactor4"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+                    <!-- Actor 5 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal"
+                        android:layout_marginStart="16dp">
+
+                        <FrameLayout
+                            android:layout_width="100dp"
+                            android:layout_height="100dp">
+
+                            <!-- Placeholder for Actor 5 image -->
+                            <ImageView
+                                android:id="@+id/actor5ImageView"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:contentDescription="@string/Happyactor5"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/happy_actor5"
+                                android:clipToOutline="true"
+                                android:background="@drawable/circle_background"
+                                />
+
+                        </FrameLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/Happyactor5"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+                    <!-- Actor 6 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal"
+                        android:layout_marginStart="16dp">
+
+                        <FrameLayout
+                            android:layout_width="100dp"
+                            android:layout_height="100dp">
+
+                            <!-- Placeholder for Actor 6 image -->
+                            <ImageView
+                                android:id="@+id/actor6ImageView"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:contentDescription="@string/Happyactor6"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/happy_actor6"
+                                android:clipToOutline="true"
+                                android:background="@drawable/circle_background"
+                                />
+
+                        </FrameLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/Happyactor6"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <!-- Watch Next section -->
+            <TextView
+                android:id="@+id/watchNextlabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Watchnext"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"/>
+
+            <!-- Happy Genres -->
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollViewGenres"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:scrollbars="none">
+
+                <!-- Home alone movies in Happy genres -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- Home alone movie 1 -->
+                    <ImageView
+                        android:id="@+id/Happymovie1"
+                        android:layout_width="200dp"
+                        android:layout_height="100dp"
+                        android:layout_marginEnd="8dp"
+                        android:contentDescription="@string/comedy_description"
+                        android:src="@drawable/alone2" />
+
+                    <!-- Home alone movie 2 -->
+                    <ImageView
+                        android:id="@+id/Happymovie2"
+                        android:layout_width="200dp"
+                        android:layout_height="100dp"
+                        android:layout_marginEnd="8dp"
+                        android:contentDescription="@string/animations_description"
+                        android:src="@drawable/alone3" />
+
+                    <!-- Home alone movie 3 -->
+                    <ImageView
+                        android:id="@+id/Happymovie3"
+                        android:layout_width="200dp"
+                        android:layout_height="100dp"
+                        android:layout_marginEnd="8dp"
+                        android:contentDescription="@string/family_description"
+                        android:src="@drawable/alone4" />
+
+                    <!-- Home alone movie 4 -->
+                    <ImageView
+                        android:id="@+id/Happymovie5"
+                        android:layout_width="200dp"
+                        android:layout_height="100dp"
+                        android:contentDescription="@string/adventure_description"
+                        android:src="@drawable/alone5" />
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

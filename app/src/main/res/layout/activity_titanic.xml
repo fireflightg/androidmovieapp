@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Moodvie Bar on top -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/textViewMoodvie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/Moodvie_Logo"
+                android:textColor="@color/lightblue"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/sadface"
+                android:layout_width="48dp"
+                android:layout_height="52dp"
+                android:layout_marginTop="5dp"
+                android:contentDescription="@string/sadface"
+                app:layout_constraintBottom_toBottomOf="@id/textViewMoodvie"
+                app:layout_constraintEnd_toStartOf="@id/textViewMood"
+                app:layout_constraintHorizontal_bias="0.428"
+                app:layout_constraintStart_toEndOf="@id/textViewMoodvie"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.647"
+                app:srcCompat="@drawable/sad" />
+
+            <TextView
+                android:id="@+id/textViewMood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="@string/mood_sad_text"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Movie section with image, play button, and descriptions -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Image for the movie preview -->
+            <ImageView
+                android:id="@+id/previewImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/titanicposter"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/home_alone_preview" />
+
+            <!-- Play button image -->
+            <ImageView
+                android:id="@+id/playButton"
+                android:layout_width="62dp"
+                android:layout_height="52dp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center_horizontal"
+                android:contentDescription="@string/Playbtn"
+                android:src="@drawable/blueplay" />
+
+            <!-- Text view for the movie title -->
+            <TextView
+                android:id="@+id/titleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/titanic_title"
+                android:textColor="@color/lightblue"
+                android:textSize="24sp"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp" />
+
+            <!-- Description text view -->
+            <TextView
+                android:id="@+id/descriptionTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/titanic_desc"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"
+                android:gravity="start" />
+
+            <!-- Actors section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:paddingTop="16dp">
+
+                <!-- Actor 1 -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal">
+
+                    <FrameLayout
+                        android:layout_width="100dp"
+                        android:layout_height="100dp">
+
+                        <ImageView
+                            android:id="@+id/actor1ImageView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/sadactor1"
+                            android:contentDescription="@string/Happyactor1"
+                            android:clipToOutline="true"
+                            android:background="@drawable/circle_background" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/sad_actor1"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+                <!-- Actor 2 to 4 similar to Actor 1 with respective changes -->
+
+                <!-- Other actor layouts go here, similar to Actor 1 -->
+
+            </LinearLayout> <!-- End of Actors section -->
+        </LinearLayout> <!-- End of Movie section -->
+
+    </LinearLayout> <!-- End of main LinearLayout -->
+</ScrollView>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">My Applicationmovie</string>
+    <string name="main_logo">WELCOME TO MOODVIE!</string>
+    <string name="Slogan">Watch the latest Movies or TV shows based on your mood. Even if you are a crybaby, you will like this one.</string>
+    <string name="Join">Join the MOODVIE community now by pressing the button below!</string>
+    <string name="Button_text">Click here</string>
+
+    <string name="spiderman_description">Spiderman movie advertisement</string>
+    <string name="twd_description">The Walking Dead TV show advertisement</string>
+    <string name="tr_description">Transformers movie advertisement</string>
+
+    <string name="mood_checker">MOOD CHECKER</string>
+    <string name="take_pic">Take picture</string>
+    <string name="mood_description">Show us your current mood with an expression. Feel free to give your biggest smile! (or dont)</string>
+
+    <string name="Happyhuh">Feeling happy, huh? Want to keep it that way?</string>
+    <string name="Yes">Yes, I want to keep smiling!</string>
+    <string name="Neutral">Im pretty boring and neutral</string>
+    <string name="No">No, I want to keep crying like a baby</string>
+    <string name="img_description">Different moods</string>
+
+    <string name="Moodvie_Logo">MOODVIE</string>
+    <string name="ad_spiderman">Picture of spiderman (ad)</string>
+    <string name="ad_up">Picture of up (ad)</string>
+    <string name="happyface">Img of a happyface</string>
+    <string name="sadface">Img of  a sadface</string>
+    <string name="trending_happy_mv">Trending Happy Movies</string>
+    <string name="happy_classics_text">Happy Classics</string>
+    <string name="mood_happy_text">Mood: Happy</string>
+    <string name="mood_sad_text">Mood: Sad</string>
+    <string name="happy_genres">Happy Genres</string>
+
+    <string name="sad_classics_text">Sad Classics</string>
+    <string name="trending_sad_mv">Trending Sad Movies</string>
+    <string name="romance_description">Display picture of the romance section</string>
+    <string name="drama_description">Display picture of the drama section</string>
+    <string name="tragedy_description">Display picture of tragedy section</string>
+    <string name="war_description">Display picture of war section</string>
+
+    <string name="comedy_description">Comedy image genres</string>
+    <string name="animations_description">Animations image genres</string>
+    <string name="family_description">Family image genres</string>
+    <string name="adventure_description">Adventure image genres</string>
+
+    <string name="home_alone_preview">Home Alone preview</string>
+    <string name="Home_alone_title">Home Alone</string>
+    <string name="home_alone_desc">
+    "Home Alone" is a classic family comedy film about an 8-year-old boy named Kevin McCallister who is accidentally left behind when his family goes on vacation for Christmas. While alone at home, Kevin must defend his house from two burglars using clever traps.</string>
+    <string name="Happyactor1">Macaulay Culkin</string>
+    <string name="Happyactor2">Joe Pesci</string>
+    <string name="Happyactor3">Daniel Stern</string>
+    <string name="Happyactor4">Kieran Culkin</string>
+    <string name="Happyactor5">Catherina O Hara</string>
+    <string name="Happyactor6">John Heard</string>
+
+
+    <string name="titanic_preview">Titanic preview</string>
+    <string name="titanic_title">Titanic</string>
+    <string name="titanic_desc">
+    "Titanic" is a 1997 American epic romance and disaster film directed, written, co-produced, and co-edited by James Cameron. It tells the story of the sinking of the RMS Titanic, and the tragic romance between Jack Dawson and Rose DeWitt Bukater.
+</string>
+    <string name="sad_actor1">Leonardo DiCaprio</string>
+    <string name="sad_actor2">Kate Winslet</string>
+    <string name="sad_actor3">Billy Zane</string>
+    <string name="sad_actor4">Kathy Bates</string>
+    <string name="sad_actor5">Frances Fisher</string>
+    <string name="sad_actor6">Bernard Hill</string>
+    <string name="Playbtn">The play button</string>
+    <string name="Watchnext">Watch Next</string>
+
+
+
+
+</resources>
